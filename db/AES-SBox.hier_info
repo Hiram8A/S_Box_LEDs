@@ -1,26 +1,34 @@
 |AES_SBox
-CLOCK_50 => CLOCK_50.IN2
-SW[0] => data_in[0].IN1
-SW[1] => data_in[1].IN1
-SW[2] => data_in[2].IN1
-SW[3] => data_in[3].IN1
-SW[4] => data_in[4].IN1
-SW[5] => data_in[5].IN1
-SW[6] => data_in[6].IN1
-SW[7] => data_in[7].IN1
+CLOCK_50 => CLOCK_50.IN1
+SW[0] => comb.DATAB
+SW[0] => led_data.DATAA
+SW[1] => comb.DATAB
+SW[1] => led_data.DATAA
+SW[2] => comb.DATAB
+SW[2] => led_data.DATAA
+SW[3] => comb.DATAB
+SW[3] => led_data.DATAA
+SW[4] => comb.DATAB
+SW[4] => led_data.DATAA
+SW[5] => comb.DATAB
+SW[5] => led_data.DATAA
+SW[6] => comb.DATAB
+SW[6] => led_data.DATAA
+SW[7] => comb.DATAB
+SW[7] => led_data.DATAA
 SW[8] => ~NO_FANOUT~
-SW[9] => encrypt_mode.IN2
-LEDR[0] << led_display:led_display_inst.leds
-LEDR[1] << led_display:led_display_inst.leds
-LEDR[2] << led_display:led_display_inst.leds
-LEDR[3] << led_display:led_display_inst.leds
-LEDR[4] << led_display:led_display_inst.leds
-LEDR[5] << led_display:led_display_inst.leds
-LEDR[6] << led_display:led_display_inst.leds
-LEDR[7] << led_display:led_display_inst.leds
-LEDR[8] << debounced_reset.DB_MAX_OUTPUT_PORT_TYPE
+SW[9] => encrypt_mode.IN1
+LEDR[0] << led_data.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << led_data.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << led_data.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] << led_data.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] << led_data.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] << led_data.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] << led_data.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] << led_data.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] << debouncer:reset_debounce.btn_out
 LEDR[9] << encrypt_mode.DB_MAX_OUTPUT_PORT_TYPE
-KEY => raw_reset.IN1
+KEY => reset_raw.IN1
 
 
 |AES_SBox|debouncer:reset_debounce
@@ -85,95 +93,5 @@ data_out[4] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[5] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[6] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[7] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|AES_SBox|control:control_inst
-clk => address[0].CLK
-clk => address[1].CLK
-clk => address[2].CLK
-clk => address[3].CLK
-clk => address[4].CLK
-clk => address[5].CLK
-clk => address[6].CLK
-clk => address[7].CLK
-reset => address[0].ACLR
-reset => address[1].ACLR
-reset => address[2].ACLR
-reset => address[3].ACLR
-reset => address[4].ACLR
-reset => address[5].ACLR
-reset => address[6].ACLR
-reset => address[7].ACLR
-encrypt => encrypt.IN1
-data_in[0] => address[0].DATAIN
-data_in[1] => address[1].DATAIN
-data_in[2] => address[2].DATAIN
-data_in[3] => address[3].DATAIN
-data_in[4] => address[4].DATAIN
-data_in[5] => address[5].DATAIN
-data_in[6] => address[6].DATAIN
-data_in[7] => address[7].DATAIN
-data_out[0] <= sbox_lookup:sbox_inst.data_out
-data_out[1] <= sbox_lookup:sbox_inst.data_out
-data_out[2] <= sbox_lookup:sbox_inst.data_out
-data_out[3] <= sbox_lookup:sbox_inst.data_out
-data_out[4] <= sbox_lookup:sbox_inst.data_out
-data_out[5] <= sbox_lookup:sbox_inst.data_out
-data_out[6] <= sbox_lookup:sbox_inst.data_out
-data_out[7] <= sbox_lookup:sbox_inst.data_out
-
-
-|AES_SBox|control:control_inst|sbox_lookup:sbox_inst
-encrypt => data_out.OUTPUTSELECT
-encrypt => data_out.OUTPUTSELECT
-encrypt => data_out.OUTPUTSELECT
-encrypt => data_out.OUTPUTSELECT
-encrypt => data_out.OUTPUTSELECT
-encrypt => data_out.OUTPUTSELECT
-encrypt => data_out.OUTPUTSELECT
-encrypt => data_out.OUTPUTSELECT
-address[0] => sbox.RADDR
-address[0] => inv_sbox.RADDR
-address[1] => sbox.RADDR1
-address[1] => inv_sbox.RADDR1
-address[2] => sbox.RADDR2
-address[2] => inv_sbox.RADDR2
-address[3] => sbox.RADDR3
-address[3] => inv_sbox.RADDR3
-address[4] => sbox.RADDR4
-address[4] => inv_sbox.RADDR4
-address[5] => sbox.RADDR5
-address[5] => inv_sbox.RADDR5
-address[6] => sbox.RADDR6
-address[6] => inv_sbox.RADDR6
-address[7] => sbox.RADDR7
-address[7] => inv_sbox.RADDR7
-data_out[0] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[4] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[5] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[6] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-data_out[7] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|AES_SBox|led_display:led_display_inst
-data[0] => leds[0].DATAIN
-data[1] => leds[1].DATAIN
-data[2] => leds[2].DATAIN
-data[3] => leds[3].DATAIN
-data[4] => leds[4].DATAIN
-data[5] => leds[5].DATAIN
-data[6] => leds[6].DATAIN
-data[7] => leds[7].DATAIN
-leds[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
-leds[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
-leds[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
-leds[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
-leds[4] <= data[4].DB_MAX_OUTPUT_PORT_TYPE
-leds[5] <= data[5].DB_MAX_OUTPUT_PORT_TYPE
-leds[6] <= data[6].DB_MAX_OUTPUT_PORT_TYPE
-leds[7] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
 
 

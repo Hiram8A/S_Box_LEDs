@@ -1,0 +1,222 @@
+# Current time Mon Nov 18 00:57:32 2024
+# Program = vish
+# Id = "2023.3"
+# Version = "2023.07"
+# Date = "Jul 17 2023"
+# Platform = win64
+
+Exception c0000005 has occurred at address 6d255e8b. Traceback:
+# 0    0x6d255e8b: 'TkWinGetDrawableDC + 0x2b'
+# 1    0x6d25724c: 'XCopyArea + 0x4c'
+# 2    0x6d24c516: 'Tk_3DVerticalBevel + 0x32a6'
+# 3    0x6d53a5ff: 'TclServiceIdle + 0x6f'
+# 4    0x6d500e13: 'Tcl_DoOneEvent + 0x193'
+# 5    0x6d2ba330: 'TkGetDisplayOf + 0x1ff0'
+# 6    0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 7    0x7ffc14e5f384: 'Itcl_EvalMemberCode + 0x384'
+# 8    0x7ffc14e6035d: 'Itcl_ExecMethod + 0x20d'
+# 9    0x7ffc14e671b5: 'Itcl_EvalArgs + 0x1a5'
+# 10   0x7ffc14e62baa: 'Itcl_HandleInstance + 0x29a'
+# 11   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 12   0x7ffc14e5f384: 'Itcl_EvalMemberCode + 0x384'
+# 13   0x7ffc14e6035d: 'Itcl_ExecMethod + 0x20d'
+# 14   0x7ffc14e671b5: 'Itcl_EvalArgs + 0x1a5'
+# 15   0x7ffc14e62baa: 'Itcl_HandleInstance + 0x29a'
+# 16   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 17   0x6d31491e: 'TkSetWindowMenuBar + 0xc8e'
+# 18   0x6d263de6: 'TkWinHandleMenuEvent + 0x486'
+# 19   0x6d26a808: 'TkpMakeMenuWindow + 0x6c8'
+# 20   0x7ffc3636ef5c: 'CallWindowProcW + 0x60c'
+# 21   0x7ffc3636e684: 'DispatchMessageW + 0x4a4'
+# 22   0x6d56d140: 'Tcl_WaitForEvent + 0x1b0'
+# 23   0x6d500dd3: 'Tcl_DoOneEvent + 0x153'
+# 24   0x6d2cb655: 'Tk_MainLoop + 0x25'
+# 25   0x6d30d972: 'Tk_MainEx + 0x932'
+# 26   0x1401c4c62: 'Mtirpc_Init + 0x248d2'
+# 27   0x1401c7e61: 'Mtirpc_Init + 0x27ad1'
+# 28   0x1407efc58: 'Tclsqlite3_Init + 0x1dac8'
+# 29   0x7ffc36287374: 'BaseThreadInitThunk + 0x14'
+# 30   0x7ffc37edcc91: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+
+# Current time Mon Nov 18 00:57:32 2024
+# Program = vish
+# Id = "2023.3"
+# Version = "2023.07"
+# Date = "Jul 17 2023"
+# Platform = win64
+
+Exception c0000005 has occurred at address 6d255e8b. Traceback:
+# 0    0x6d255e8b: 'TkWinGetDrawableDC + 0x2b'
+# 1    0x6d25724c: 'XCopyArea + 0x4c'
+# 2    0x6d24c516: 'Tk_3DVerticalBevel + 0x32a6'
+# 3    0x6d53a5ff: 'TclServiceIdle + 0x6f'
+# 4    0x6d500e13: 'Tcl_DoOneEvent + 0x193'
+# 5    0x6d4b87f8: 'TclInThreadExit + 0x128'
+# 6    0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 7    0x6d44a501: 'Tcl_EvalEx + 0xb01'
+# 8    0x6d44aac8: 'Tcl_Eval + 0x38'
+# 9    0x1401c42e9: 'Mtirpc_Init + 0x23f59'
+# 10   0x1404427f1: 'Sqlite3_Unload + 0x46601'
+# 11   0x1401c472f: 'Mtirpc_Init + 0x2439f'
+# 12   0x1401c49ea: 'Mtirpc_Init + 0x2465a'
+# 13   0x1407f0a2a: 'Tclsqlite3_Init + 0x1e89a'
+# 14   0x7ffc2fa4f0e0: '_C_specific_handler + 0xa0'
+# 15   0x7ffc37f328bf: '_chkstk + 0x11f'
+# 16   0x7ffc37ee2554: 'RtlRaiseException + 0x484'
+# 17   0x7ffc37f313ce: 'KiUserExceptionDispatcher + 0x2e'
+# 18   0x6d255e8b: 'TkWinGetDrawableDC + 0x2b'
+# 19   0x6d25724c: 'XCopyArea + 0x4c'
+# 20   0x6d24c516: 'Tk_3DVerticalBevel + 0x32a6'
+# 21   0x6d53a5ff: 'TclServiceIdle + 0x6f'
+# 22   0x6d500e13: 'Tcl_DoOneEvent + 0x193'
+# 23   0x6d2ba330: 'TkGetDisplayOf + 0x1ff0'
+# 24   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 25   0x7ffc14e5f384: 'Itcl_EvalMemberCode + 0x384'
+# 26   0x7ffc14e6035d: 'Itcl_ExecMethod + 0x20d'
+# 27   0x7ffc14e671b5: 'Itcl_EvalArgs + 0x1a5'
+# 28   0x7ffc14e62baa: 'Itcl_HandleInstance + 0x29a'
+# 29   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 30   0x7ffc14e5f384: 'Itcl_EvalMemberCode + 0x384'
+# 31   0x7ffc14e6035d: 'Itcl_ExecMethod + 0x20d'
+# 32   0x7ffc14e671b5: 'Itcl_EvalArgs + 0x1a5'
+# 33   0x7ffc14e62baa: 'Itcl_HandleInstance + 0x29a'
+# 34   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 35   0x6d31491e: 'TkSetWindowMenuBar + 0xc8e'
+# 36   0x6d263de6: 'TkWinHandleMenuEvent + 0x486'
+# 37   0x6d26a808: 'TkpMakeMenuWindow + 0x6c8'
+# 38   0x7ffc3636ef5c: 'CallWindowProcW + 0x60c'
+# 39   0x7ffc3636e684: 'DispatchMessageW + 0x4a4'
+# 40   0x6d56d140: 'Tcl_WaitForEvent + 0x1b0'
+# 41   0x6d500dd3: 'Tcl_DoOneEvent + 0x153'
+# 42   0x6d2cb655: 'Tk_MainLoop + 0x25'
+# 43   0x6d30d972: 'Tk_MainEx + 0x932'
+# 44   0x1401c4c62: 'Mtirpc_Init + 0x248d2'
+# 45   0x1401c7e61: 'Mtirpc_Init + 0x27ad1'
+# 46   0x1407efc58: 'Tclsqlite3_Init + 0x1dac8'
+# 47   0x7ffc36287374: 'BaseThreadInitThunk + 0x14'
+# 48   0x7ffc37edcc91: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+
+# Current time Mon Nov 18 00:57:32 2024
+# Program = vish
+# Id = "2023.3"
+# Version = "2023.07"
+# Date = "Jul 17 2023"
+# Platform = win64
+
+Exception c0000005 has occurred at address 6d255e8b. Traceback:
+# 0    0x6d255e8b: 'TkWinGetDrawableDC + 0x2b'
+# 1    0x6d25724c: 'XCopyArea + 0x4c'
+# 2    0x6d24c516: 'Tk_3DVerticalBevel + 0x32a6'
+# 3    0x6d53a5ff: 'TclServiceIdle + 0x6f'
+# 4    0x6d500e13: 'Tcl_DoOneEvent + 0x193'
+# 5    0x6d4b87f8: 'TclInThreadExit + 0x128'
+# 6    0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 7    0x6d44a501: 'Tcl_EvalEx + 0xb01'
+# 8    0x6d44aac8: 'Tcl_Eval + 0x38'
+# 9    0x1401c42e9: 'Mtirpc_Init + 0x23f59'
+# 10   0x1404427f1: 'Sqlite3_Unload + 0x46601'
+# 11   0x1401c472f: 'Mtirpc_Init + 0x2439f'
+# 12   0x1401c49ea: 'Mtirpc_Init + 0x2465a'
+# 13   0x1407f0a2a: 'Tclsqlite3_Init + 0x1e89a'
+# 14   0x7ffc2fa4f0e0: '_C_specific_handler + 0xa0'
+# 15   0x7ffc37f328bf: '_chkstk + 0x11f'
+# 16   0x7ffc37ee2554: 'RtlRaiseException + 0x484'
+# 17   0x7ffc37f313ce: 'KiUserExceptionDispatcher + 0x2e'
+# 18   0x6d255e8b: 'TkWinGetDrawableDC + 0x2b'
+# 19   0x6d25724c: 'XCopyArea + 0x4c'
+# 20   0x6d24c516: 'Tk_3DVerticalBevel + 0x32a6'
+# 21   0x6d53a5ff: 'TclServiceIdle + 0x6f'
+# 22   0x6d500e13: 'Tcl_DoOneEvent + 0x193'
+# 23   0x6d2ba330: 'TkGetDisplayOf + 0x1ff0'
+# 24   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 25   0x7ffc14e5f384: 'Itcl_EvalMemberCode + 0x384'
+# 26   0x7ffc14e6035d: 'Itcl_ExecMethod + 0x20d'
+# 27   0x7ffc14e671b5: 'Itcl_EvalArgs + 0x1a5'
+# 28   0x7ffc14e62baa: 'Itcl_HandleInstance + 0x29a'
+# 29   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 30   0x7ffc14e5f384: 'Itcl_EvalMemberCode + 0x384'
+# 31   0x7ffc14e6035d: 'Itcl_ExecMethod + 0x20d'
+# 32   0x7ffc14e671b5: 'Itcl_EvalArgs + 0x1a5'
+# 33   0x7ffc14e62baa: 'Itcl_HandleInstance + 0x29a'
+# 34   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 35   0x6d31491e: 'TkSetWindowMenuBar + 0xc8e'
+# 36   0x6d263de6: 'TkWinHandleMenuEvent + 0x486'
+# 37   0x6d26a808: 'TkpMakeMenuWindow + 0x6c8'
+# 38   0x7ffc3636ef5c: 'CallWindowProcW + 0x60c'
+# 39   0x7ffc3636e684: 'DispatchMessageW + 0x4a4'
+# 40   0x6d56d140: 'Tcl_WaitForEvent + 0x1b0'
+# 41   0x6d500dd3: 'Tcl_DoOneEvent + 0x153'
+# 42   0x6d2cb655: 'Tk_MainLoop + 0x25'
+# 43   0x6d30d972: 'Tk_MainEx + 0x932'
+# 44   0x1401c4c62: 'Mtirpc_Init + 0x248d2'
+# 45   0x1401c7e61: 'Mtirpc_Init + 0x27ad1'
+# 46   0x1407efc58: 'Tclsqlite3_Init + 0x1dac8'
+# 47   0x7ffc36287374: 'BaseThreadInitThunk + 0x14'
+# 48   0x7ffc37edcc91: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+
+# Current time Mon Nov 18 00:57:32 2024
+# Program = vish
+# Id = "2023.3"
+# Version = "2023.07"
+# Date = "Jul 17 2023"
+# Platform = win64
+
+Exception c0000005 has occurred at address 6d255e8b. Traceback:
+# 0    0x6d255e8b: 'TkWinGetDrawableDC + 0x2b'
+# 1    0x6d25724c: 'XCopyArea + 0x4c'
+# 2    0x6d24c516: 'Tk_3DVerticalBevel + 0x32a6'
+# 3    0x6d53a5ff: 'TclServiceIdle + 0x6f'
+# 4    0x6d500e13: 'Tcl_DoOneEvent + 0x193'
+# 5    0x6d4b87f8: 'TclInThreadExit + 0x128'
+# 6    0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 7    0x6d44a501: 'Tcl_EvalEx + 0xb01'
+# 8    0x6d44aac8: 'Tcl_Eval + 0x38'
+# 9    0x1401c42e9: 'Mtirpc_Init + 0x23f59'
+# 10   0x1404427f1: 'Sqlite3_Unload + 0x46601'
+# 11   0x1401c472f: 'Mtirpc_Init + 0x2439f'
+# 12   0x1401c49ea: 'Mtirpc_Init + 0x2465a'
+# 13   0x1407f0a2a: 'Tclsqlite3_Init + 0x1e89a'
+# 14   0x7ffc2fa4f0e0: '_C_specific_handler + 0xa0'
+# 15   0x7ffc37f328bf: '_chkstk + 0x11f'
+# 16   0x7ffc37ee2554: 'RtlRaiseException + 0x484'
+# 17   0x7ffc37f313ce: 'KiUserExceptionDispatcher + 0x2e'
+# 18   0x6d255e8b: 'TkWinGetDrawableDC + 0x2b'
+# 19   0x6d25724c: 'XCopyArea + 0x4c'
+# 20   0x6d24c516: 'Tk_3DVerticalBevel + 0x32a6'
+# 21   0x6d53a5ff: 'TclServiceIdle + 0x6f'
+# 22   0x6d500e13: 'Tcl_DoOneEvent + 0x193'
+# 23   0x6d2ba330: 'TkGetDisplayOf + 0x1ff0'
+# 24   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 25   0x7ffc14e5f384: 'Itcl_EvalMemberCode + 0x384'
+# 26   0x7ffc14e6035d: 'Itcl_ExecMethod + 0x20d'
+# 27   0x7ffc14e671b5: 'Itcl_EvalArgs + 0x1a5'
+# 28   0x7ffc14e62baa: 'Itcl_HandleInstance + 0x29a'
+# 29   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 30   0x7ffc14e5f384: 'Itcl_EvalMemberCode + 0x384'
+# 31   0x7ffc14e6035d: 'Itcl_ExecMethod + 0x20d'
+# 32   0x7ffc14e671b5: 'Itcl_EvalArgs + 0x1a5'
+# 33   0x7ffc14e62baa: 'Itcl_HandleInstance + 0x29a'
+# 34   0x6d448bfc: 'TclNRRunCallbacks + 0x5c'
+# 35   0x6d31491e: 'TkSetWindowMenuBar + 0xc8e'
+# 36   0x6d263de6: 'TkWinHandleMenuEvent + 0x486'
+# 37   0x6d26a808: 'TkpMakeMenuWindow + 0x6c8'
+# 38   0x7ffc3636ef5c: 'CallWindowProcW + 0x60c'
+# 39   0x7ffc3636e684: 'DispatchMessageW + 0x4a4'
+# 40   0x6d56d140: 'Tcl_WaitForEvent + 0x1b0'
+# 41   0x6d500dd3: 'Tcl_DoOneEvent + 0x153'
+# 42   0x6d2cb655: 'Tk_MainLoop + 0x25'
+# 43   0x6d30d972: 'Tk_MainEx + 0x932'
+# 44   0x1401c4c62: 'Mtirpc_Init + 0x248d2'
+# 45   0x1401c7e61: 'Mtirpc_Init + 0x27ad1'
+# 46   0x1407efc58: 'Tclsqlite3_Init + 0x1dac8'
+# 47   0x7ffc36287374: 'BaseThreadInitThunk + 0x14'
+# 48   0x7ffc37edcc91: 'RtlUserThreadStart + 0x21'
+StackWalk failed 0
+# End of Stack Trace
+
