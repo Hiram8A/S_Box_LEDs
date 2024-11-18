@@ -15,7 +15,7 @@ AES_SBox/
 
 ## Descripción de Módulos
 
-### AES_SBox (Nivel Superior)
+### AES_SBox (Top Level / Nivel Superior)
 - Controlador principal del sistema
 - Maneja el flujo de datos entre componentes
 - Gestiona los modos de encriptación/desencriptación
