@@ -1,0 +1,56 @@
+module AES_SBox (
+    input wire CLOCK_50,          // 50MHz clock
+    input wire [9:0] SW,          // Input switches
+    output wire [9:0] LEDR,       // Red LEDs
+    input wire [1:0] KEY          // Push buttons
+);
+
+    // Internal signals
+    wire [7:0] data_in;          // Input data from switches
+    wire [7:0] sbox_out;         // Output from S-box
+    wire [7:0] control_out;      // Output from control module
+    wire [7:0] led_data;         // Data to display
+    wire encrypt_mode;           // Encryption/decryption mode
+    wire raw_reset;              // Raw reset from button
+    wire debounced_reset;        // Debounced reset signal
+
+    // Signal assignments
+    assign data_in = SW[7:0];
+    assign encrypt_mode = SW[9];
+    assign raw_reset = ~KEY[0];  // Active low button
+
+    // Debouncer instance
+    debouncer reset_debounce (
+        .clk_50MHz(CLOCK_50),
+        .btn_in(raw_reset),
+        .btn_out(debounced_reset)
+    );
+
+    // S-box lookup instance
+    sbox_lookup sbox_inst (
+        .encrypt(encrypt_mode),
+        .address(data_in),
+        .data_out(sbox_out)
+    );
+
+    // Control module instance
+    control control_inst (
+        .clk(CLOCK_50),
+        .reset(debounced_reset),
+        .encrypt(encrypt_mode),
+        .data_in(sbox_out),     // Input from S-box
+        .data_out(control_out)
+    );
+
+    // LED display instance
+    led_display led_display_inst (
+        .data(control_out),
+        .leds(led_data)
+    );
+
+    // Output assignments
+    assign LEDR[7:0] = led_data;
+    assign LEDR[9] = encrypt_mode;
+    assign LEDR[8] = debounced_reset;
+
+endmodule
