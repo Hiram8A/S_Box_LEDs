@@ -83,6 +83,10 @@ parameter CLK_FREQ_MHZ = 50;    // Reloj del sistema de 50MHz
 4. Prueba de operación de desencriptación
 5. Validación de cambio de modos (Encriptación / Desencriptación)
 
+## Diagrama RTL
+
+Para más detalles sobre el diagrama RTL, consulte el siguiente enlace: [Diagrama RTL](RTL_Diagram.pdf).
+
 ## Referencias
 
 - [Estándar AES (FIPS 197)](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf)
